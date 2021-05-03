@@ -1,4 +1,4 @@
-//import gifAnimation.*;
+import gifAnimation.*;
 
 //int framesGif = 0;
 //GifMaker gifExport;
@@ -12,9 +12,8 @@ int boxSize = 60;
 int space = 40;
 void setup() {
   size(600, 600, P3D) ;
-
-  //noStroke();
-   sh = loadShader("CodeFrag.glsl", "CodeVert.glsl");  
+  sh = loadShader("CodeFrag.glsl", "CodeVert.glsl");  
+  
   //gifExport = new GifMaker(this, "export.gif");
   //gifExport.setRepeat(0);
 }
@@ -64,22 +63,22 @@ void draw() {
   }
 
   
-  /*
-  if(framesGif > 3){
+  
+  /*if(framesGif > 4){
     gifExport.addFrame();
     framesGif = 0;
   }
   framesGif++;
   */
-  
   frames++;
 }
 
+/*
 void keyPressed(){
-  /*if(key == 'b'){
+  if(key == 'b'){
     gifExport.finish();
-  }*/
-}
+  }
+}*/
 
 void mousePressed() {
   resetShader();
